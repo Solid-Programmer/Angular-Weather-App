@@ -1,0 +1,27 @@
+mat-card img {
+  object-fit: cover;
+  width: 40%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+}
+
+.container {
+  color: whitesmoke;
+}
+
+
+.weather-icon {
+  width: 250%;/* Here you can use wherever you want to specify the width and also the height of the <img>*/
+}
+
+.sub-cards {
+  width: 300px;
+  border: 2px;
+  background-color: lightcyan;
+}
+
+.mat-elevation-z4 {
+    width: 25%;
+    margin: 2em;
+    background-color:lightblue;
+    background-size: cover;
+    opacity: 1;
+}

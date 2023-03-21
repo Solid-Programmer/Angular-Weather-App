@@ -1,0 +1,25 @@
+<div class="container" *ngIf="WeatherData">
+      <mat-card class="mat-elevation-z4" style="align-items: center;">
+
+        <mat-card-header>
+          <mat-card-title style="font-size:50px;margin-bottom: 20px;">{{WeatherData.name}}</mat-card-title>
+          <mat-card-subtitle style="font-size: 25px; margin-bottom: 30px;">{{WeatherData.dt | date : 'fullDate'}}</mat-card-subtitle>
+          <mat-card-subtitle style="font-size: 20px; margin-bottom: 60px;">Weather : {{WeatherData.weather[0].main}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div style="font-size:50px;color:darkblue;">{{WeatherData.main.temp}}&deg;C</div>
+          <div class="weather-icon"><img src="https://openweathermap.org/img/w/{{WeatherData.weather[0].icon}}.png" alt="Weather Icon"></div>
+          <div>Min Temp : {{WeatherData.main.temp_min}}&deg;C</div>
+          <div>Max Temp : {{WeatherData.main.temp_max}}&deg;C</div>
+          <br>
+          <div>Feels Like : {{WeatherData.main.feels_like}}&deg;C</div>
+          <div>WindSpeed : {{WeatherData.wind.speed}}km/h</div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button  (click)="getWeatherForecastData()" mat-button style="background-color: black; color: wheat;">Details</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+
+
